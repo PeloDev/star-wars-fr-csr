@@ -23,7 +23,6 @@ import {
   GiMale,
   GiWeight
 } from "react-icons/gi";
-import crossingSabersImg from "../../assets/images/crossing-light-sabers.png";
 import { MdNavigateBefore } from "react-icons/md";
 import CharacterProfileSkeleton from "../../components/CharacterProfileSkeleton";
 import starsBG from "../../assets/images/stars.png"

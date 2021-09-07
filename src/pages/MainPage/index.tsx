@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Center, CircularProgress, Flex, Image, VStack } from "@chakra-ui/react";
 import SWScrollingText from "../../components/SWScrollingText";
 import { starWarsScrollBG } from "../../styles";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import tempImg from "../../assets/images/characters/r2d2.png";
 import { localStorageKey } from "../../core/app-context";
 import { ICharacter, ICharactersResult } from "../../interfaces";
 import { fetchPeople, searchPerson } from "../../core/api";
@@ -142,9 +141,25 @@ export default function MainPage() {
                 w={240}
                 h={240}
                 fit="contain"
-                src={tempImg}
+                src="https://res.cloudinary.com/dhrbbwjkf/image/upload/v1630964503/star-wars/characters/r2-d2.png"
                 pos="relative"
                 animation="driftInSpace infinite 8s linear"
+                fallback={
+                  <VStack
+                    w={240}
+                    h={240}
+                    justify="center"
+                  >
+                    <Center>
+                      <CircularProgress
+                        isIndeterminate
+                        size={30}
+                        trackColor="transparent"
+                        color="#ffc909"
+                      />
+                    </Center>
+                  </VStack>
+                }
               />
               <SearchBar
                 isLoading={isLoading}
