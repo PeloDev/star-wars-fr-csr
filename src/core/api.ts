@@ -57,12 +57,10 @@ export async function fetchPerson(id: string) {
                     height, 
                     mass, 
                     gender, 
-                    images {
-                        url
-                        thumbnail
-                    },
+                    image,
                     homeworldOb {
-                        name
+                        name,
+                        image
                     }
                 }
             }

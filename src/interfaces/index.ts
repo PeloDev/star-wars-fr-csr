@@ -13,6 +13,7 @@ export interface ICharacter {
   gender: string;
   homeworld: string;
   images?: ICharacterImage[];
+  image?: string;
   homeworldOb?: any;
 }
 

@@ -61,6 +61,33 @@ body {
     }
 }
 
+@keyframes staticDriftInSpace {
+  0% {
+    transform: rotate(-2deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes revealImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes swTextScrollBU {
   from { top: -500px; transform: translateZ(0) rotateX(20deg); }
 	to { top: -7500px; transform: translateZ(-2500px) rotateX(20deg); }
