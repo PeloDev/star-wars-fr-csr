@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800&display=swap');
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background: rgb(20,20,20);
+  overflow: hidden;
+  font-family: 'Roboto';
+  /* push down the the wrapper by half the page */
+  position: relative;
+}
+
+.sw-wrapper {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  /* perspective gives us a 3d space within the element to work with*/
+  /* perspective also has the effect of pushing the content "down" */
+  perspective: 450px;
+}
+
+@keyframes swTextScroll {
+  from { transform: translateZ(0) rotateX(20deg); }
+	to { top: -2500px; transform: translateZ(-833px) rotateX(20deg); }
+}
+
+@keyframes swLogoAnim {
+  from {transform: scale(1); opacity: 1; }
+	to { transform: scale(0.3); opacity: 0.4; }
+}
+
+@keyframes driftInSpace {
+    0% {
+      top: 0px;
+      left: -8px;
+      transform: rotate(-6deg);
+    }
+    25% {
+      top: -8px;
+      left: 0px;
+      transform: rotate(0deg);
+    }
+    50% {
+      top: 0px;
+      left: 8px;
+      transform: rotate(6deg);
+    }
+    75% {
+      top: 8px;
+      left: 0px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 0px;
+      left: -8px;
+      transform: rotate(-6deg);
+    }
+}
+
+@keyframes swTextScrollBU {
+  from { top: -500px; transform: translateZ(0) rotateX(20deg); }
+	to { top: -7500px; transform: translateZ(-2500px) rotateX(20deg); }
+}

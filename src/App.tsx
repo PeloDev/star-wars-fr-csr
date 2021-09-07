@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect, useState } from "react";
 
-function App() {
+import "./styles.css";
+import { StateProvider } from "./core/app-context";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./core/theme";
+import MainPage from "./pages/MainPage";
+import Routes from "./core/routes";
+import NotFound from "./pages/NotFoundPage";
+import CharacterProfilePage from "./pages/CharacterProfilePage";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider>
+      <ChakraProvider theme={theme}>
+        <Routes />
+      </ChakraProvider>
+    </StateProvider>
   );
 }
-
-export default App;
