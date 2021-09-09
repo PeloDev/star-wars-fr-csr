@@ -75,6 +75,7 @@ export default function CharacterProfilePage() {
       minH="100vh"
       overflowY="auto"
       h="100vh"
+      overflowX="hidden"
     >
       <Box backgroundColor="rgba(0,0,0,0.4)" pt={6} w="100%">
         <Flex justifyContent="space-between" w="100%">
