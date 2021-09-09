@@ -132,7 +132,7 @@ export default function MainPage() {
           }}
         />
       ) : (
-        <Box h="100vh" overflowY="auto">
+        <Box h="100vh" overflowY="auto" overflowX="hidden">
           <Box ref={topRef} />
           <Header />
           <Box p={6}>
